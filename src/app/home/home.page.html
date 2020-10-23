@@ -1,0 +1,93 @@
+<ion-content>
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+        <ion-menu-toggle>
+            <ion-fab-button color="dark" translucent="true">
+                <ion-icon name="menu"></ion-icon>
+            </ion-fab-button>
+        </ion-menu-toggle>
+    </ion-fab>
+    <div class="imageDiv">
+        <img [src]="'assets/imgs/' + page.title +'.jpg'">
+    </div>
+    <div class="heading" text-uppercase>
+        .{{page.title}}
+    </div>
+    <div class="three" [style.backgroundColor]="page.color">
+    </div>
+    <div style="position: absolute;
+    margin-top: -55px;
+    padding: 5px 20px;">
+        <span class="dateBox">{{date | date:'MMMM dd'}}</span><br>
+        <span class="dayBox">{{daysInWeek[day]}}</span>
+    </div>
+    <div *ngIf="newsList.length > 0" class="overlayDiv">
+    </div>
+    <div *ngIf="newsList.length > 0" class="bg-transparent">
+        <h3 class="ion-padding-horizontal">.LATEST NEWS</h3>
+        <div *ngFor="let news of newsList" mode="ios" (click)="openNews(news)" [style.display]="news.urlToImage ? 'inherit' : 'none'" class="newsBlock">
+            <div class="blockImage">
+                <!-- <img class="blockimg" [src]="news.urlToImage"> -->
+
+        <img class="blockimg" [ngStyle]="{'display' : news.load ? 'initial' : 'none'}" [src]="news.urlToImage" (load)="imageload(news)">
+        <img class="blockimg" [ngStyle]="{'display' : news.load ? 'none' : 'initial'}" [src]="default">
+
+            </div>
+            <div class="newsTitle">
+                {{news.title}}
+            </div>
+            <div class="date">
+                {{news.publishedAt | date:' dd MMM, yyyy'}}
+            </div>
+        </div>
+    </div>
+    <!--         <div *ngIf="newsList.length > 0" class="bg-transparent">
+            <h2 class="ion-padding-horizontal">.NEWS</h2>
+            <div *ngFor="let news of newsList" mode="ios" (click)="openNews(news)" [style.display]="news.urlToImage ? 'inherit' : 'none'" class="newsBlock">
+                <div class="blockImage">
+                    <img class="blockimg" [src]="news.urlToImage">
+                </div>
+                <div class="newsTitle">
+                    {{news.title}}
+                </div>
+                <div class="date">
+                    {{news.publishedAt | date:' dd MMM, yyyy'}}
+                </div>
+            </div>
+        </div> -->
+    <!--     <ion-fab vertical="top" horizontal="start" slot="fixed">
+        <ion-menu-toggle>
+            <ion-fab-button color="dark" translucent="true">
+                <ion-icon name="menu"></ion-icon>
+            </ion-fab-button>
+        </ion-menu-toggle>
+    </ion-fab>
+    <div class="parent">
+        <div class="one">
+        </div>
+        <div class="three" [style.backgroundColor]="page.color">
+            <div class="heading" text-uppercase>
+                .{{page.title}}
+            </div>
+        </div>
+        <div class="two">
+        </div>
+        <div style="position: absolute;bottom:0;height: 70%;padding: 15px 20px;">
+            <span class="dateBox">{{date | date:'MMMM dd'}}</span><br>
+            <span class="dayBox">{{daysInWeek[day]}}</span>
+        </div>
+        <div *ngIf="newsList.length > 0" class="bg-transparent">
+            <h2 class="ion-padding-horizontal">.NEWS</h2>
+            <div *ngFor="let news of newsList" (click)="openNews(news)" [style.display]="news.urlToImage ? 'inherit' : 'none'" class="newsBlock">
+                <div class="blockImage">
+                    <img class="blockimg" [src]="news.urlToImage">
+                </div>
+                <div class="newsTitle">
+                    {{news.title}}
+                </div>
+                <div class="date">
+                    {{news.publishedAt | date:' dd MMM, yyyy'}}
+                </div>
+            </div>
+        </div>
+    </div> -->
+</ion-content>

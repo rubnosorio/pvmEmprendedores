@@ -1,0 +1,45 @@
+.newsBox {
+    height: 100%;
+    width: 100%;
+    // background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+.backdrop {
+    height: 100%;
+    width: 100%;
+    // background: linear-gradient(to top, black, #ffffff00);
+    opacity: 1;
+}
+
+
+
+.newsContainer {
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+}
+
+.newsTitle {
+    color: white;
+    line-height: 27px;
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.newsDesc {
+    color: #fff;
+    padding-top: 10px;
+    line-height: 17px;
+    font-size: 15px;
+}
+
+.continueButton {
+    margin-top: 30px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+}

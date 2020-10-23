@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="reveal">
+<!--       <ion-header no-border color="dark">
+        <ion-toolbar color="dark">
+          <ion-title></ion-title>
+        </ion-toolbar>
+      </ion-header> -->
+      <ion-content color="dark" padding>
+<div class="container">
+  <div style="text-align: center;">
+        <img width="100px" src="assets/icon/favicon.png">
+  </div>
+  <div class="vertical-center">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index;">
+
+    <!-- <p>I am vertically centered.</p> -->
+<div class="menuBox" (click)="openHomeWithState(p)">
+  <div class="colorBox" [style.backgroundColor]="p.color">{{i + 1}}</div>
+  <div class="titleBox">{{p.title}}</div>
+  
+</div>
+
+<!--             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon color="light" slot="start" [name]="p.icon">2</ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item> -->
+          </ion-menu-toggle>
+</div>
+  </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

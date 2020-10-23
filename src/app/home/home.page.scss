@@ -1,0 +1,210 @@
+.welcome-card img {
+    max-height: 35vh;
+    overflow: hidden;
+}
+
+ion-fab-button {
+    --background: #cccccc;
+}
+
+button {
+    background: transparent !important;
+}
+
+.parent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.color {
+    border-radius: 50%;
+    padding: 5px;
+    // background-color: red;
+    background-blend-mode: multiply;
+}
+
+.one,
+.two,
+.three {
+    position: absolute;
+    width: 100%;
+}
+
+.one {
+    height: 40%;
+    // opacity: 0.6;    
+    // position: fixed;
+    // z-index: 999;
+    top: 0;
+    // background-image: url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Falejandrocremades%2Ffiles%2F2018%2F07%2Fdesk-3139127_1920-1200x773.jpg);
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 68%);
+    will-change: transform;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 68%);
+    background-size: cover;
+
+    // &::before {
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 68%);
+    // will-change: transform; // creates a new paint layer
+    // z-index: -1;
+    // }
+
+
+}
+
+.three {
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -31px;
+    width: 200%;
+    background: #0984e3;
+    opacity: 0.8;
+    top: 0;
+    -webkit-transform: rotate(369deg);
+    transform: rotate(369deg);
+    -webkit-backface-visibility: hidden;
+}
+
+.heading {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25.5px 25px;
+    -webkit-backface-visibility: hidden;
+    color: #fff;
+    font-size: 20px;
+    z-index: 999;
+    font-weight: 600;
+}
+
+.two {
+    height: 66%;
+    bottom: 0;
+    // clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+.button-native {
+    background: #00000082;
+}
+
+ion-item {
+    --background: rgba(0, 0, 0, 0);
+    --border-color: rgba(255, 255, 255);
+}
+
+.bg-transparent {
+    background: #c0c2c0;
+    padding: 0px 10px;
+    -webkit-backface-visibility: hidden;
+    // position: absolute;
+    // padding-top: 50px;
+    margin-top: -100px;
+    will-change: transform;
+    z-index: 9999999;
+    // clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+}
+
+.blockimg {
+    border-radius: 50%;
+    padding: 10px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.blockImage {
+    float: left;
+    width: 100px;
+}
+
+.newsBlock {
+    height: 110px;
+    border-bottom: 1px solid #fff;
+    padding-top: 4px;
+}
+
+
+.newsTitle {
+    float: right;
+    width: calc(100% - 100px);
+    padding: 15px 3px;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    max-height: 65px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #000;
+}
+
+.date {
+    padding-left: 10px;
+    font-size: 15px;
+    height: 20px;
+    float: left;
+    font-weight: 300;
+    color: #737373;
+}
+
+.dateBox {
+    color: #9d9d9d;
+    font-weight: 400;
+}
+
+.dayBox {
+    color: #000000;
+    font-weight: 600;
+}
+
+.imageDiv {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    height: 200px;
+}
+
+.imageDiv:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    left: -23px;
+    bottom: -91%;
+    background: white;
+    -webkit-transform: rotate(369deg);
+    transform: rotate(369deg);
+}
+
+.overlayDiv {
+    height: 150px;
+    width: 200%;
+    background: #0000003d;
+    -webkit-transform: rotate(349deg);
+    transform: rotate(349deg);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-backface-visibility: hidden;
+    // opacity: 0.3;
+    /* position: absolute; */
+    margin-top: -40px;
+    margin-left: -100px;
+    z-index: 99999999;
+}
+
+// .overlayDiv:after {
+// content: "";
+// position: absolute;
+// width: 200%;
+// height: 100%;
+// left: -23px;
+// bottom: -91%;
+// background: white;
+// -webkit-transform: rotate(369deg);
+// transform: rotate(369deg);
+// }

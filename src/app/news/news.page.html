@@ -1,0 +1,22 @@
+<ion-content>
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+        <ion-fab-button (click)="back()" routerDirection="backward" color="dark" translucent="true">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <div class="newsBox" [ngStyle]="{'background-image':'url(' + img + ')'}">
+        <div class="backdrop" [ngStyle]="{background: 'linear-gradient(to top, ' + page.color + ', transparent)'}">
+            <div class="newsContainer">
+                <div class="newsTitle">
+                    {{news.title}}
+                </div>
+                <div class="newsDesc">
+                    {{news.description || news.content}}
+                </div>
+                <div (click)="open()" class="continueButton">
+                    continue reading
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
